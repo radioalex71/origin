@@ -4,9 +4,9 @@
 
 #include <iostream>
 
-enum class months
+enum class months //описание перечисления месяцев
 {
-    january = 1,
+    january = 1, //нумерацию начинаем с "1"
     february,
     march,
     april,
@@ -22,16 +22,16 @@ enum class months
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Russian");
-    int number{};
-    do
+    setlocale(LC_ALL, "Russian"); //настройка консоли для работы с русскими буквами
+    int number{}; //объявление и инициализация переменной для хранения введенного значения
+    do //цикл для ввода значений и вывода информации
     {
         std::cout << "Введите номер месяца: ";
         std::cin >> number;
         
-        months month = static_cast <months> (number);
+        months month = static_cast <months> (number); //преобразование пользовательского ввода к типу перечисления
         
-        switch (month)
+        switch (month) //цикл для вывода информацмм в зависимости от входного значения
         {
         case months::january:
             std::cout << "Январь" << std::endl;
@@ -72,13 +72,13 @@ int main(int argc, char** argv)
         default:
             if (number != 0)
             {
-                std::cout << "Неправильный номер!" << std::endl;
+                std::cout << "Неправильный номер!" << std::endl; //в случае, если ввод отличается от диапазона "1 - 12"
             }
             break;
         }
-    } while (number != 0);
+    } while (number != 0); //выполнение цикла, пока ввод не равен "0"
     
-    std::cout << "До свидания!" << std::endl;
+    std::cout << "До свидания!" << std::endl; //при вводе "0" - выход из программы
     
     return 0;
 }
