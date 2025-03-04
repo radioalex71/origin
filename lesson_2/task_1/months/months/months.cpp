@@ -1,4 +1,4 @@
-﻿// NetoHomework_3_1_01
+﻿// NetoHomework_3_2_01
 // Author: Ryabinkin Alexey
 // Data: 03.03.25
 
