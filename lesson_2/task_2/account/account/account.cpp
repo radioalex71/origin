@@ -11,12 +11,13 @@ struct account //создание структуры для хранения д�
     int number{};
     std::string name{};
     float balanсe{};
+
+    float setBalance{};
 };
 
 void changeBalance(account& newbalance) //создание функции для изменения баланса
 {
-    std::cout << "Введите новый баланс: ";
-    std::cin >> newbalance.balanсe;
+    newbalance.balanсe = newbalance.setBalance;
 }
 
 int main()
@@ -34,6 +35,9 @@ int main()
     std::cin >> person.name;
     std::cout << "Введите баланс: ";
     std::cin >> person.balanсe;
+    std::cout << "Введите новый баланс: ";
+    std::cin >> person.setBalance;
+    std::cout << std::endl;
     
     changeBalance(person); //вызов функции для изменения баланса
 
